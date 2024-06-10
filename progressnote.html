@@ -16,18 +16,19 @@
     <div id="progressnote">
         <h1>Progress Note</h1>
 
-        <label>Select Patient:</label> <select id="servicetype">
-            <option value="patient1">Patient 1</option>
-            <option value="patient2">Patient 2</option>
-            <option value="patient3">Patient 3</option>
-            <option value="patient4">Patient 4</option>
+        <label>Select Patient:</label> <select id="patient">
+            <option value="patient1">PatientFName1 PatientLName1</option>
+            <option value="patient1">PatientFName2 PatientLName2</option>
+            <option value="patient1">PatientFName3 PatientLName3</option>
+            <option value="patient1">PatientFName4 PatientLName4</option>
+            <option value="patient1">PatientFName5 PatientLName5</option>
         </select> <br><br>
         
         <label>Type of Service:</label> <select id="servicetype">
-            <option value="service1">Service 1</option>
-            <option value="service2">Service 2</option>
-            <option value="service3">Service 3</option>
-            <option value="service4">Service 4</option>
+            <option value="service1">Service1</option>
+            <option value="service2">Service2</option>
+            <option value="service3">Service3</option>
+            <option value="service4">Service4</option>
         </select> <br><br>
 
         <label>Date of Service:</label> <input type="date" id="servicedate"> <br><br>
@@ -36,23 +37,31 @@
 
         <label>Session End Time:</label> <input type="time" id="endtime"> <br><br>
 
-        <label>Summary of Treatment:</label> <textarea cols="55" rows="4"></textarea> <br><br>
+        <label>Summary of Treatment:</label> 
+            <textarea id="servicesummary" cols="55" rows="4"></textarea> <br><br>
 
-        <label>Progress with Overall Treatment Plan Goals/Objectives:</label> <textarea cols="55" rows="4"></textarea> <br><br>
+        <label>Progress with Overall Treatment Plan Goals/Objectives:</label> 
+            <textarea id="treatmentprogress" cols="55" rows="4"></textarea> <br><br>
 
-        <label>Response/Reaction to Treatment Interventions:</label> <textarea cols="55" rows="4"></textarea> <br><br>
+        <label>Response/Reaction to Treatment Interventions:</label> 
+            <textarea id="treatmentresponse" cols="55" rows="4"></textarea> <br><br>
 
-        <label>Assessment of Patient Mental Health Status</label> <textarea cols="55" rows="4"></textarea> <br><br>
+        <label>Assessment of Patient Mental Health Status</label> 
+            <textarea id="patientassessment" cols="55" rows="4"></textarea> <br><br>
 
-        <label>Patient Risk Factors:</label> <textarea cols="55" rows="4"></textarea> <br><br>
+        <label>Patient Risk Factors:</label> 
+            <textarea id="riskfactors" cols="55" rows="4"></textarea> <br><br>
 
-        <label>Emergency Interventions:</label> <textarea cols="55" rows="4"></textarea> <br><br>
+        <label>Emergency Interventions:</label> 
+            <textarea id="interventions" cols="55" rows="4"></textarea> <br><br>
 
         <button>Save Form</button> <br><br>
         <button>Delete Form</button> <br><br>
         <button><a href="providerdashboard.html">Return to Dashboard</a></button> <br><br>
 
-
-
     </div>
+    <script>
+        document.getElementById("patient").selectedIndex = -1;
+        document.getElementById("servicetype").selectedIndex = -1;
+    </script>
 </html>
