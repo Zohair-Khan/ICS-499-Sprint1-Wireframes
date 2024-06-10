@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Admin Dashboard</title>
+    <style>
+        div {
+            margin: 50px;
+            /* width: 80vw; */
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px;
+        }
+
+        container {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px;
+        }
+
+        #myTable {
+            border-collapse: collapse;
+            width: 90vw;
+            border: 1px solid #ddd;
+            font-size: 18px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #myTable th, #myTable td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        #myTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        #searchfilter {
+            font-size: 18px;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+  </head>
+  <body>
+    <!-- https://www.w3schools.com/howto/howto_js_filter_table.asp -->
+    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table -->
+    <div>
+        <h1>Welcome back, AdminFName1</h1>
+        <button type="button"><a href="index.html">Logout</a></button><br><br>
+
+        <h2>Filter Progress Notes:</h2>
+        <label>Patient First Name: </label> <input type="text" id="patientfname"> <br><br>
+        <label>Patient Last Name: </label><input type="text" id="patientlname"> <br><br>
+        <label>Provider First Name: </label> <input type="text" id="providerfname"> <br><br>
+        <label>Provider Last Name: </label><input type="text" id="providerlname"> <br><br>
+        <label>Date of Service: Between </label> <input type="date" id="servicedatestart"><label> and </label><input type="date" id="servicedateend"> <br><br>
+        <label>Time of Service: From </label> <input type="time" id="servicetimestart"><label> to </label><input type="date" id="servicetimeend"> <br><br>
+        <label>Type of Service:</label> <select id="servicetype">
+            <option value="service1">Service 1</option>
+            <option value="service2">Service 2</option>
+            <option value="service3">Service 3</option>
+            <option value="service4">Service 4</option>
+        </select> <br><br>
+
+        <table id="myTable">
+            <tr class="header">
+            <th>NoteID</th>
+            <th>Patient FName</th>
+            <th>Patient LName</th>
+            <th>Provider FName</th>
+            <th>Provider LName</th>
+            <th>Service Date</th>
+            <th>Service Type</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Last Saved</th>
+            <th>Approved?</th>
+            </tr>
+            <tr>
+                <td>0000001</td>
+                <td>PatientFName1</td>
+                <td>PatientLName1</td>
+                <td>ProviderFName1</td>
+                <td>ProviderLName1</td>
+                <td>01/01/1970</td>
+                <td>Service1</td>
+                <td>01:00 AM</td>
+                <td>11:00 AM</td>
+                <td><a href="progressnote.html">11:30 AM 01/01/1970</a></td>
+                <td>YES</td>
+            </tr>
+            <tr>
+                <td>0000002</td>
+                <td>PatientFName1</td>
+                <td>PatientLName1</td>
+                <td>ProviderFName1</td>
+                <td>ProviderLName1</td>
+                <td>01/02/1970</td>
+                <td>Service1</td>
+                <td>02:00 AM</td>
+                <td>01:00 PM</td>
+                <td><a href="progressnote.html">01:30 PM 01/02/1970</a></td>
+                <td>YES</td>
+            </tr>
+            <tr>
+                <td>0000003</td>
+                <td>PatientFName2</td>
+                <td>PatientLName2</td>
+                <td>ProviderFName2</td>
+                <td>ProviderLName2</td>
+                <td>01/03/1970</td>
+                <td>Service1</td>
+                <td>03:00 AM</td>
+                <td>04:00 PM</td>
+                <td><a href="progressnote.html">04:30 PM 01/03/1970</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>0000004</td>
+                <td>PatientFName3</td>
+                <td>PatientLName3</td>
+                <td>ProviderFName3</td>
+                <td>ProviderLName3</td>
+                <td>01/04/1970</td>
+                <td>Service1</td>
+                <td>02:00 AM</td>
+                <td>01:00 PM</td>
+                <td><a href="progressnote.html">01:30 PM 01/04/1970</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>0000005</td>
+                <td>PatientFName4</td>
+                <td>PatientLName4</td>
+                <td>ProviderFName4</td>
+                <td>ProviderLName4</td>
+                <td>01/04/1970</td>
+                <td>Service1</td>
+                <td>01:30 AM</td>
+                <td>01:00 PM</td>
+                <td><a href="progressnote.html">01:30 PM 01/04/1970</a></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+  </body>
+</html>
